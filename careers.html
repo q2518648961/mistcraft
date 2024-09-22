@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招贤纳士 - 溪岚国际有限公司</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">溪岚国际有限公司</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">关于我们</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#culture">企业文化</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">我们的服务</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">联系我们</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="careers.html">招贤纳士</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">注册</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center mb-5">招贤纳士</h1>
+        
+        <section id="job-openings" class="mb-5">
+            <h2 class="mb-4">当前职位</h2>
+            <div class="row" id="job-list">
+                <!-- 职位列表将通过 JavaScript 动态添加 -->
+            </div>
+        </section>
+
+        <section id="application-form" class="mb-5">
+            <h2 class="mb-4">申请职位</h2>
+            <form id="job-application-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">姓名</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">电子邮箱</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">电话</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="position" class="form-label">申请职位</label>
+                    <select class="form-select" id="position" required>
+                        <option value="">请选择职位</option>
+                        <!-- 职位选项将通过 JavaScript 动态添加 -->
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="resume" class="form-label">上传简历</label>
+                    <input type="file" class="form-control" id="resume" accept=".pdf,.doc,.docx" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cover-letter" class="form-label">求职信</label>
+                    <textarea class="form-control" id="cover-letter" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">提交申请</button>
+            </form>
+        </section>
+
+        <section id="contact-info" class="mb-5">
+            <h2 class="mb-4">联系我们</h2>
+            <p><i class="fas fa-envelope me-2"></i>招聘邮箱：recruitment@xilan.com</p>
+            <p><i class="fas fa-phone me-2"></i>招聘热线：+86 123 4567 8900</p>
+            <p><i class="fas fa-map-marker-alt me-2"></i>公司地址：[您的公司地址]</p>
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <!-- 复制 index.html 中的页脚内容 -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="careers.js"></script>
+</body>
+</html>

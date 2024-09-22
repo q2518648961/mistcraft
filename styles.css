@@ -1,0 +1,322 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.owl-carousel .item img {
+    width: 100%;
+    height: 400px; /* 您可以根据需要调整高度 */
+    object-fit: cover; /* 这会确保图片填满整个容器，可能会裁剪部分图片 */
+}
+
+#chat-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.用户 {
+    background-color: #e6f3ff;
+    text-align: right;
+}
+
+.小溪客服 {
+    background-color: #f0f0f0;
+}
+
+footer a:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+footer {
+    margin-top: 50px;
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+footer img {
+    transition: transform 0.3s ease;
+}
+
+footer a:hover img {
+    transform: scale(1.1);
+}
+
+footer .fab {
+    color: white;
+    font-size: 24px; /* 增加图标大小 */
+    transition: all 0.3s ease;
+}
+
+footer .fab:hover {
+    color: #00CED1; /* 鼠标悬停时变为青色，与网站主题色一致 */
+    transform: scale(1.2); /* 鼠标悬停时略微放大 */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* 增加图标之间的间距 */
+    display: inline-block; /* 使 transform 效果生效 */
+}
+
+footer a:hover {
+    color: #00CED1; /* 鼠标悬停时链接文字也变为青色 */
+}
+
+/* 修改社交图标样式 */
+footer .social-icon {
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+footer .social-icon:hover {
+    color: #00CED1;
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+footer a:hover {
+    color: #00CED1;
+}
+
+/* 删除或注释掉以下样式 */
+/*
+footer .social-icons {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+*/
+
+/* 悬浮聊天框样式 */
+.chat-widget {
+    position: fixed;
+    bottom: 30px; /* 稍微调高位置 */
+    right: 30px; /* 稍微向右移动 */
+    z-index: 1000;
+    transition: all 0.3s ease; /* 恢复过渡效果 */
+}
+
+.chat-widget.fullscreen {
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none;
+    max-height: none;
+}
+
+/* 修改 .chat-container 样式 */
+.chat-container {
+    display: none;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.fullscreen .chat-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+/* 添加全屏按钮样式 */
+#fullscreen-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* 修改全屏按钮和关闭按钮的样式 */
+#fullscreen-chat,
+#close-chat {
+    background: none;
+    border: none;
+    color: #000; /* 改为黑色 */
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+#fullscreen-chat:hover,
+#close-chat:hover {
+    color: #333; /* 鼠标悬停时的颜色 */
+}
+
+/* 修改聊天框头部样式 */
+#chat-header {
+    background-color: #f8f9fa; /* 浅灰色背景 */
+    color: #000; /* 黑色文字 */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    user-select: none; /* 防止文本被选中 */
+}
+
+/* 如果需要，可以调整聊天图标的颜色 */
+.chat-icon {
+    width: 80px; /* 增加尺寸 */
+    height: 80px; /* 增加尺寸 */
+    background-color: #00CED1; /* 青色背景 */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.chat-icon:hover {
+    background-color: #20B2AA; /* 鼠标悬停时的颜色 */
+    transform: scale(1.1); /* 鼠标悬停时略微放大 */
+}
+
+.chat-icon i {
+    color: white; /* 白色图标 */
+    font-size: 40px; /* 增加图标大小 */
+}
+
+/* 响应式设计调整 */
+@media (max-width: 768px) {
+    .chat-widget:not(.fullscreen) {
+        width: 100%;
+        height: 50vh;
+        max-width: none;
+        max-height: none;
+        bottom: 0;
+        right: 0;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+/* 移除 #drag-handle 样式 */
+/* #drag-handle {
+    display: inline-block;
+    margin-right: 10px;
+} */
+
+/* 在文件末尾添加以下样式 */
+
+.container {
+    max-width: 1200px; /* 或者您希望的任何宽度 */
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem; /* 调整大小以适应您的需求 */
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* 在小屏幕上稍微减小字体大小 */
+    }
+}
+
+/* 添加到styles.css文件中 */
+.square-carousel .owl-stage-outer {
+    width: 100%;
+    padding-top: 100%; /* 创建1:1的宽高比 */
+    position: relative;
+    overflow: hidden;
+}
+
+.square-carousel .owl-stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.square-carousel .owl-item {
+    height: 100%;
+}
+
+.square-carousel .item {
+    height: 100%;
+}
+
+.square-carousel .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 确保图片填满整个区域 */
+}
+
+/* 在文件末尾添加 */
+.container.mt-5.pt-5 {
+    margin-top: 80px !important; /* 为固定导航栏留出空间 */
+}
+
+#registerForm {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 在文件末尾添加 */
+#loginForm {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 招贤纳士页面样式 */
+#job-openings .card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#application-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
